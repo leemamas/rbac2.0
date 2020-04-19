@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        .header{
+            width: 100%;
+            height: 60px;
+            background-color: dodgerblue;
+        }
+        .menu{
+            background-color: cornsilk;
+            position: fixed;
+            top: 60px;
+            bottom: 0px;
+            left: 0px;
+            width: 200px;
+        }
+        .content{
+            position: fixed;
+            top: 60px;
+            bottom: 0px;
+            left: 200px;
+            right: 0px;
+            overflow: auto;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="header"></div>
+<div class="container">
+    <div class="menu">111</div>
+
+    <div class="content">
+
+        {% block content %}
+        {% endblock %}
+
+    </div>
+
+
+</div>
+</body>
+</html>
