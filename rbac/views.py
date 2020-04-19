@@ -31,7 +31,8 @@ def login(request):
 def user(request):
     users=User.objects.all()
     permission=Permission(request.actions)
-    return render(request, 'users.html', locals())
+
+    return render(request, 'rbac/user.html', locals())
 
 def user_add(request):
     return HttpResponse('user add！')
@@ -47,11 +48,23 @@ def user_delete(request,id):
 
 
 def role(request):
-    return HttpResponse('roles views!')
+    roles = Role.objects.all()
+    permission = Permission(request.actions)
+
+    return render(request, 'rbac/role.html', locals())
 
 
 def role_add(request):
     return HttpResponse('role add!')
+
+def role_edit(request,id):
+
+    print('edit', id)
+    return HttpResponse('role edit！')
+
+def role_delete(request,id):
+    print('delete',id)
+    return HttpResponse('role delete！')
 
 class Permission(object):
     def __init__(self,actions):

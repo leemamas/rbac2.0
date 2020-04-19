@@ -28,12 +28,20 @@
             overflow: auto;
             padding: 30px;
         }
+        .menu_btn{
+            font-size: 18px;
+            text-align: center;
+            padding: 30px 0px;
+        }
     </style>
 </head>
 <body>
 <div class="header"></div>
 <div class="container">
-    <div class="menu">111</div>
+    {% load tags %}
+    <div class="menu">
+        {% get_menu request %}
+    </div>
 
     <div class="content">
 

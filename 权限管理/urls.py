@@ -13,4 +13,6 @@ urlpatterns = [
     re_path('user/delete/(\d+)/', user_delete),
     path('role/', role),
     path('role/add/', role_add),
+    re_path('role/edit/(\d+)/', role_edit),
+    re_path('role/delete/(\d+)/', role_delete),
 ]

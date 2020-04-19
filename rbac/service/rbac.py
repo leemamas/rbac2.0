@@ -11,12 +11,11 @@ class ValidPermission(MiddlewareMixin):
         current_path = request.path_info
 
         # 白名单
-        whiteList = ['/login/', '/admin/.*']
+        whiteList = ['/login/', '/admin/.*','^/$']
 
         for url in whiteList:
             ret = re.match(url, current_path)
             if ret:
-
                 return None
 
         # 检验登录
